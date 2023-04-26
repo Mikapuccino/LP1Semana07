@@ -24,22 +24,16 @@ namespace BetterFillSpheres
             }
         }
 
-        public float Pop
+        public void Pop()
         {
-            set
-            {
-                Radius = 0;
-            }
+            Radius = 0;
         }
 
-        public int Throw
+        public void Throw()
         {
-            set
+            if (Radius > 0)
             {
-                if (Radius > 0)
-                {
-                    Thrown += 1;
-                }
+                thrown += 1;
             }
         }
 
