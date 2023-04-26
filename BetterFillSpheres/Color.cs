@@ -7,12 +7,12 @@ namespace BetterFillSpheres
 {
     public class Color
     {
-        private byte red;
-        private byte green;
-        private byte blue;
-        private byte alpha;
+        public byte Red { get; set; }
+        public byte Green { get; set; }
+        public byte Blue { get; set; }
+        public byte Alpha { get; set; } = 255;
 
-        public Color(byte red, byte green, byte blue, byte alpha = 255)
+        public Color(byte red, byte green, byte blue, byte alpha)
         {
             this.red = red;
             this.green = green;
@@ -20,55 +20,18 @@ namespace BetterFillSpheres
             this.alpha = alpha;
         }
 
-        public byte GetRed()
+        public int Grey
         {
-            return red;
-        }
+            get
+            {
+                int intRed = Convert.ToInt32(red);
+                int intGreen = Convert.ToInt32(green);
+                int intBlue = Convert.ToInt32(blue);
 
-        public void SetRed(byte newRed)
-        {
-            red = newRed;
-        }
+                int intGrey = (intRed + intGreen + intBlue) / 3;
 
-        public byte GetGreen()
-        {
-            return green;
-        }
-
-        public void SetGreen(byte newGreen)
-        {
-            green = newGreen;
-        }
-
-        public byte GetBlue()
-        {
-            return blue;
-        }
-
-        public void SetBlue(byte newBlue)
-        {
-            blue = newBlue;
-        }
-
-        public byte GetAlpha()
-        {
-            return alpha;
-        }
-
-        public void SetAlpha(byte newAlpha)
-        {
-            alpha = newAlpha;
-        }
-
-        public int GetGrey()
-        {
-            int intRed = Convert.ToInt32(red);
-            int intGreen = Convert.ToInt32(green);
-            int intBlue = Convert.ToInt32(blue);
-
-            int intGrey = (intRed + intGreen + intBlue) / 3;
-
-            return intGrey;
+                return intGrey;
+            }
         }
     }
 }
