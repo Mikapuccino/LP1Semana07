@@ -7,46 +7,42 @@ namespace BetterFillSpheres
 {
     public class Sphere
     {
-        public Color Color
+        private int thrown;
+        
+        public Color Color { get; set; }
+        public float Radius { get; set; }
+
+        private int Thrown
         {
             get
             {
-                byte[] colorValues = new byte[4];
-                colorValues[0] = color.GetRed();
-                colorValues[1] = color.GetGreen();
-                colorValues[2] = color.GetBlue();
-                colorValues[3] = color.GetAlpha();
-                return colorValues;
+                return thrown;
             }
-        }
-        public float Radius { get; set; }
-
-        public Sphere(Color color, float radius)
-        {
-            this.color = color;
-            this.radius = radius;
-            int thrown = 0;
-        }
-
-        public void Pop
-        {
             set
             {
-                radius = 0;
+                thrown = 0;
             }
         }
 
-        public void Throw
+        public float Pop
         {
             set
             {
-                if (radius > 0)
+                Radius = 0;
+            }
+        }
+
+        public int Throw
+        {
+            set
+            {
+                if (Radius > 0)
                 {
-                    thrown += 1;
+                    Thrown += 1;
                 }
             }
         }
 
-        public int GetTimesThrown => thrown;
+        public int GetTimesThrown => Thrown;
     }
 }
