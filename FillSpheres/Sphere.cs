@@ -18,6 +18,26 @@ namespace FillSpheres
             thrown = 0;
         }
 
+        public Color GetColor()
+        {
+            return color;
+        }
+
+        public void SetColor(Color newColor)
+        {
+            color = newColor;
+        }
+
+        public float GetRadius()
+        {
+            return radius;
+        }
+
+        public void SetRadius(float newRadius)
+        {
+            radius = newRadius;
+        }
+
         public void Pop()
         {
             radius = 0;
