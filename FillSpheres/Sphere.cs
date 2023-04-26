@@ -7,7 +7,7 @@ namespace FillSpheres
 {
     public class Sphere
     {
-        private Color color;
+        private readonly Color color;
         private float radius;
         private int thrown;
 
@@ -19,28 +19,13 @@ namespace FillSpheres
         }
 
         public byte[] GetColor()
-        {
+        {   
             byte[] colorValues = new byte[4];
             colorValues[0] = color.GetRed();
             colorValues[1] = color.GetGreen();
             colorValues[2] = color.GetBlue();
             colorValues[3] = color.GetAlpha();
             return colorValues;
-        }
-
-        public void SetColor(Color newColor)
-        {
-            color = newColor;
-        }
-
-        public float GetRadius()
-        {
-            return radius;
-        }
-
-        public void SetRadius(float newRadius)
-        {
-            radius = newRadius;
         }
 
         public void Pop()
