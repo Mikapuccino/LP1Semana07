@@ -18,9 +18,14 @@ namespace FillSpheres
             thrown = 0;
         }
 
-        public Color GetColor()
+        public byte[] GetColor()
         {
-            return color;
+            byte[] colorValues = new byte[4];
+            colorValues[0] = color.GetRed();
+            colorValues[1] = color.GetGreen();
+            colorValues[2] = color.GetBlue();
+            colorValues[3] = color.GetAlpha();
+            return colorValues;
         }
 
         public void SetColor(Color newColor)
@@ -47,7 +52,7 @@ namespace FillSpheres
         {
             if (radius > 0)
             {
-                thrown =+ 1;
+                thrown += 1;
             }
         }
 

@@ -12,6 +12,7 @@ namespace FillSpheres
             Color color2 = new Color(0, 255, 0);
             Color color3 = new Color(50, 100, 250);
 
+            Console.WriteLine("Color 1 values: ");
             Console.WriteLine(color1.GetRed());
             Console.WriteLine(color1.GetGreen());
             Console.WriteLine(color1.GetBlue());
@@ -22,28 +23,53 @@ namespace FillSpheres
             Sphere sphere2 = new Sphere(color2, 180);
             Sphere sphere3 = new Sphere(color3, 42);
 
-            sphere1.GetColor();
-            sphere2.GetColor();
-            sphere3.GetColor();
+            byte[] sphere1Colors = sphere1.GetColor();
+            Console.WriteLine("Sphere 1 colors: ");
+            for (int i = 0; i < sphere1Colors.Length; i++)
+                Console.WriteLine(sphere1Colors[i]);
+
+            byte[] sphere2Colors = sphere2.GetColor();
+            Console.WriteLine("Sphere 2 colors: ");
+            for (int i = 0; i < sphere2Colors.Length; i++)
+                Console.WriteLine(sphere2Colors[i]);
+            
+            byte[] sphere3Colors = sphere3.GetColor();
+            Console.WriteLine("Sphere 3 colors: ");
+            for (int i = 0; i < sphere3Colors.Length; i++)
+                Console.WriteLine(sphere3Colors[i]);
 
             sphere1.Throw();
             sphere1.Throw();
             sphere1.Throw();
+            Console.WriteLine("Sphere 1 times thrown: ");
             Console.WriteLine(sphere1.GetTimesThrown());
             sphere1.SetColor(color2);
-            sphere1.GetColor();
+            sphere1Colors = sphere1.GetColor();
+            Console.WriteLine("Sphere 1 colors: ");
+            for (int i = 0; i < sphere1Colors.Length; i++)
+                Console.WriteLine(sphere1Colors[i]);
 
             sphere2.Throw();
             sphere2.Throw();
             sphere2.Pop();
             sphere2.Throw();
+            Console.WriteLine("Sphere 2 times thrown: ");
             Console.WriteLine(sphere2.GetTimesThrown());
+            sphere2Colors = sphere2.GetColor();
+            Console.WriteLine("Sphere 2 colors: ");
+            for (int i = 0; i < sphere2Colors.Length; i++)
+                Console.WriteLine(sphere2Colors[i]);
 
             sphere3.Pop();
             sphere3.Throw();
             sphere3.Throw();
             sphere3.Throw();
+            Console.WriteLine("Sphere 3 times thrown: ");
             Console.WriteLine(sphere3.GetTimesThrown());
+            sphere3Colors = sphere3.GetColor();
+            Console.WriteLine("Sphere 3 colors: ");
+            for (int i = 0; i < sphere3Colors.Length; i++)
+                Console.WriteLine(sphere3Colors[i]);
         }
     }
 }
