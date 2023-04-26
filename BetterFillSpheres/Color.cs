@@ -12,6 +12,7 @@ namespace BetterFillSpheres
         public byte Blue { get; set; }
         public byte Alpha { get; set; } = 255;
 
+        // Returns the average between all color values
         public int Grey
         {
             get
