@@ -77,6 +77,10 @@ namespace BetterFillSpheres
 
             Console.WriteLine("Sphere 3 radius: ");
             Console.WriteLine(sphere3.Radius);
+
+            Console.WriteLine($"Color 1 name: " + color1.Name);
+            Console.WriteLine($"Color 2 name: " + color2.Name);
+            Console.WriteLine($"Color 3 name: " + color3.Name);
         }
     }
 }
