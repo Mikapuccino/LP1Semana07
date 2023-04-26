@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillSpheres", "FillSpheres\FillSpheres.csproj", "{02ABE0E4-2AFE-433D-89AC-088AC1827F18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterFillSpheres", "BetterFillSpheres\BetterFillSpheres.csproj", "{18A87619-7004-4004-B523-0AC4073F39C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{02ABE0E4-2AFE-433D-89AC-088AC1827F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02ABE0E4-2AFE-433D-89AC-088AC1827F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02ABE0E4-2AFE-433D-89AC-088AC1827F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A87619-7004-4004-B523-0AC4073F39C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A87619-7004-4004-B523-0AC4073F39C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A87619-7004-4004-B523-0AC4073F39C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A87619-7004-4004-B523-0AC4073F39C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
