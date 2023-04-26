@@ -17,5 +17,23 @@ namespace FillSpheres
             this.radius = radius;
             thrown = 0;
         }
+
+        public void Pop()
+        {
+            radius = 0;
+        }
+
+        public void Throw()
+        {
+            if (radius > 0)
+            {
+                thrown =+ 1;
+            }
+        }
+
+        public int GetTimesThrown()
+        {
+            return thrown;
+        }
     }
 }
