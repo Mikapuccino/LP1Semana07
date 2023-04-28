@@ -32,17 +32,17 @@ namespace BetterFillSpheres
         {
             get
             {               
-                if (Red == 255)
+                if ((Red == 255) && (Green == 0) && (Blue == 0))
                 {
                     colorName += "1";
                 }
 
-                if (Green == 255)
+                if ((Red == 0) && (Green == 255) && (Blue == 0))
                 {
                     colorName += "22";
                 }
 
-                if (Blue == 255)
+                if ((Red == 0) && (Green == 0) && (Blue == 255))
                 {
                     colorName += "4444";
                 }
